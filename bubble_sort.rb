@@ -1,5 +1,7 @@
 def bubble_sort(arr)
-  (arr.length - 1).times do
+  sorted = false
+  while sorted == false
+    sorted = true
     i = 1
     (arr.length - 1).times do
       if arr[i - 1] > arr[i]
@@ -7,6 +9,7 @@ def bubble_sort(arr)
         number2 = arr[i]
         arr[i - 1] = number2
         arr[i] = number1
+        sorted = false
       end
       i += 1
     end
